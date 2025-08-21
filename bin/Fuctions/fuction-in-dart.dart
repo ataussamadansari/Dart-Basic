@@ -1,15 +1,24 @@
 void main() {
-  test();
-  sum();
-  sum(10, 23);
+
+  var myC = myClass();
+  myC.printName("Samad");
+  myC.printName("Ehatesam");
+
+  var sum = myC.addition(10, 23);
+  print("Sum of a + b : $sum");
 }
 
-void test() {
-  print("Function");
-}
+class myClass {
 
+  myClass() {
+    print("myClass object created.");
+  }
 
-void sum([int a = 0, int b = 0]) {
-  int add = a + b;
-  print("The sum is $add");
+  void printName(String name) {
+    print("Welcome, $name");
+  }
+
+  int addition(int a, int b) {
+    return a + b;
+  }
 }
